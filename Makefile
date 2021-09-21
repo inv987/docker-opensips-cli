@@ -1,6 +1,5 @@
 NAME ?= opensips-cli
 OPENSIPS_DOCKER_TAG ?= latest
-OPENSIPS_CLI ?= true
 
 all: build start
 
