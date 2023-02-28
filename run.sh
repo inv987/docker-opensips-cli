@@ -27,7 +27,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [[ $CMD == *.py ]]; then
-	TOOL=python
+	TOOL=python3
 elif [[ $CMD == *.sh ]]; then
 	TOOL=bash
 else
