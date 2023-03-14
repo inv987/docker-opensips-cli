@@ -1,7 +1,7 @@
 # OpenSIPS CLI Docker Image
-https://github.com/OpenSIPS/opensips-cli
 
-Docker recipe for running OpenSIPS Command Line Interface
+Docker recipe for running [OpenSIPS Command Line
+Interface](https://github.com/OpenSIPS/opensips-cli).
 
 ## Building the image
 You can build the docker image by running:
