@@ -48,3 +48,8 @@ To run a single MI command, use:
 docker run -d --name opensips-cli opensips/opensips-cli:latest \
 		   -o url=http://8.8.8.8:8888/mi -x mi ps
 ```
+
+## DockerHub
+
+Docker images are available on
+[DockerHub](https://hub.docker.com/r/opensips/opensips-cli).
