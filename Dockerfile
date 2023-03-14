@@ -1,4 +1,4 @@
-FROM python:3.9-slim-bullseye
+FROM python:3.9-slim-buster
 LABEL maintainer="Razvan Crainea <razvan@opensips.org>"
 
 USER root
@@ -7,12 +7,18 @@ USER root
 ENV DEBIAN_FRONTEND noninteractive
 
 #install basic components
-RUN apt-get -y update -qq && apt-get -y install gnupg2 ca-certificates
+RUN apt-get -y update -qq && \
+    apt-get -y install git default-libmysqlclient-dev gcc
 
 #add keyserver, repository
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 049AD65B
-RUN echo "deb https://apt.opensips.org bullseye cli-nightly" >/etc/apt/sources.list.d/opensips-cli.list \
-    && apt-get -y update -qq && apt-get -y install opensips-cli
+RUN git clone https://github.com/OpenSIPS/opensips-cli.git /usr/src/opensips-cli && \
+    cd /usr/src/opensips-cli && \
+    python3 setup.py install clean --all && \
+    cd / && rm -rf /usr/src/opensips-cli
+
+RUN apt-get purge -y git gcc && \
+    apt-get autoremove -y && \
+    apt-get clean
 
 ADD "run.sh" "/run.sh"
 
