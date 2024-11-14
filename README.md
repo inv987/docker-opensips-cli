@@ -1,4 +1,8 @@
-# OpenSIPS CLI Docker Image
+# DEPRECATED - OpenSIPS CLI Docker Image
+
+**DEPRECATED** - This project has been fully integrated in the [OpenSIPS
+Command Line Interface](https://github.com/OpenSIPS/opensips-cli) project.
+This project will be soon deleted.
 
 Docker recipe for running [OpenSIPS Command Line
 Interface](https://github.com/OpenSIPS/opensips-cli).
