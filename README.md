@@ -1,4 +1,4 @@
-OpenSIPS CLI Docker Image
+# OpenSIPS CLI Docker Image
 
 This project has been fully integrated in the [OpenSIPS
 Command Line Interface](https://github.com/inv987/opensips-cli) project.
