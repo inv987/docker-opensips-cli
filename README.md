@@ -1,11 +1,11 @@
 # DEPRECATED - OpenSIPS CLI Docker Image
 
 **DEPRECATED** - This project has been fully integrated in the [OpenSIPS
-Command Line Interface](https://github.com/OpenSIPS/opensips-cli) project.
+Command Line Interface](https://github.com/inv987/opensips-cli) project.
 This project will be soon deleted.
 
 Docker recipe for running [OpenSIPS Command Line
-Interface](https://github.com/OpenSIPS/opensips-cli).
+Interface](https://github.com/inv987/opensips-cli).
 
 ## Building the image
 You can build the docker image by running:
@@ -37,23 +37,23 @@ run as a python script, otherwise it is run as a `opensips-cli` command
 
 To run a bash script, simply pass the connector followed by the bash script:
 ```
-docker run -d --name opensips-cli opensips/opensips-cli:latest \
+docker run -d --name opensips-cli inv987/opensips-cli:latest \
 		   -o url=http://8.8.8.8:8888/mi script.sh
 ```
 
 Similarly, run a python script:
 ```
-docker run -d --name opensips-cli opensips/opensips-cli:latest \
+docker run -d --name opensips-cli inv987/opensips-cli:latest \
 		   -o url=http://8.8.8.8:8888/mi script.py
 ```
 
 To run a single MI command, use:
 ```
-docker run -d --name opensips-cli opensips/opensips-cli:latest \
+docker run -d --name opensips-cli inv987/opensips-cli:latest \
 		   -o url=http://8.8.8.8:8888/mi -x mi ps
 ```
 
 ## DockerHub
 
 Docker images are available on
-[DockerHub](https://hub.docker.com/r/opensips/opensips-cli).
+[DockerHub](https://hub.docker.com/r/inv987/opensips-cli).
