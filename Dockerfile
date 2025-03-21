@@ -1,5 +1,5 @@
-FROM python:3.9-slim-buster
-LABEL maintainer="Razvan Crainea <razvan@opensips.org>"
+FROM python:3.9-slim-bookworm
+LABEL maintainer="inv987"
 
 USER root
 
