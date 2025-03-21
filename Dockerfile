@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 #install basic components
 RUN apt-get -y update -qq && \
-    apt-get -y install git default-libmysqlclient-dev gcc
+    apt-get -y install git default-libmysqlclient-dev gcc python3-psycopg2
 
 #add keyserver, repository
 RUN git clone https://github.com/OpenSIPS/opensips-cli.git /usr/src/opensips-cli && \
