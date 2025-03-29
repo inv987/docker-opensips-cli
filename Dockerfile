@@ -7,7 +7,7 @@ LABEL maintainer="inv987"
 #install basic components
 RUN apt-get -y update -qq && \
     apt-get -y dist-upgrade && \
-    apt-get -y install git default-libmysqlclient-dev gcc python3-full python3-setuptools python3-distutils-extra python3-pip python3-psycopg2
+    apt-get -y install git default-libmysqlclient-dev gcc python3-full python3-setuptools python3-distutils-extra python3-pip python3-mysqldb python3-psycopg2
 
 #add keyserver, repository
 RUN git clone https://github.com/OpenSIPS/opensips-cli.git /usr/src/opensips-cli && \
@@ -15,7 +15,7 @@ RUN git clone https://github.com/OpenSIPS/opensips-cli.git /usr/src/opensips-cli
     pip install --break-system-packages . && \
     cd / && rm -rf /usr/src/opensips-cli
 
-RUN apt-get purge -y git gcc && \
+RUN apt-get purge -y git gcc rpcsvc-proto && \
     apt-get autoremove -y && \
     apt-get clean
 
