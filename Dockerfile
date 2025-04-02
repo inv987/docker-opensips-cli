@@ -15,7 +15,7 @@ RUN git clone https://github.com/OpenSIPS/opensips-cli.git /usr/src/opensips-cli
     pip install --break-system-packages . && \
     cd / && rm -rf /usr/src/opensips-cli
 
-RUN apt-get purge -y git gcc rpcsvc-proto && \
+RUN apt-get purge -y git gcc rpcsvc-proto python3-setuptools curl && \
     apt-get autoremove -y && \
     apt-get clean
 
